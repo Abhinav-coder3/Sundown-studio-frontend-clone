@@ -1,0 +1,1644 @@
+@font-face {
+    font-family: Neue Haas Mediu;
+    src: url(./Fonts/NeueHaasDisplayMediu.ttf);
+}
+@font-face {
+    font-family: Neue Haas Display Roman;
+    src: url(./Fonts/NeueHaasDisplayRoman.ttf);
+}
+@font-face {
+    font-family: Neue Haas Display thin;
+    src: url(./Fonts/NeueHaasDisplayThin.ttf);
+}
+@font-face {
+    font-family: Neue Haas Bold;
+    src: url(./Fonts/NeueHaasDisplayBold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    position: relative;
+    z-index: 10;
+}
+
+#loader{
+    width: 100%;
+    height: 100vh;
+    background-color:#0B0500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+    transition: all ease  0.7s;
+    top:0;
+}
+#loader h1{
+    background:linear-gradient(to right, #FE350B, #fe780b);
+    color: transparent;
+    background-clip: text;
+    font-size: 5vw;
+    font-family: 'Neue Haas Mediu';
+    position: absolute;
+    opacity: 0;
+    animation: load;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    transition: all linear 0.2s;
+
+}
+
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 2vw;
+    justify-content: center;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 0vw;
+    position: relative;
+    z-index: 100;
+}
+
+#Menu-main{
+    display: none;
+}
+
+#nav-p2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    
+}
+
+#nav-p2 h3{
+    display: none;
+}
+
+#nav-p2 h4{
+    border: 1px rgba(81, 78, 78, 0.248) solid;
+    font-size: 1.1vw;
+    padding: 0.8vw 1.8vw;
+    border-radius: 2vw;
+    position:relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    font-weight: -500;
+    font-family: 'Neue Haas Display thin';
+}
+
+#nav-p2 h4::after{
+    content:"";
+    position: absolute;
+    width: 125%;
+    height: 120%;
+    background-color: black;
+    left:-10%;
+    bottom: -120%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    
+    
+
+}
+#nav-p2 h4:hover::after{
+    bottom: -8%;
+} 
+
+#nav-p2 h4 a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-p2 h4:hover a{
+    color: white;
+}
+
+#center{
+    width: 100%;
+    height: 78vh;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: 4vw;
+    border-bottom: 1px rgba(0, 0, 0, 0.434) solid;
+}
+
+#center #left{
+    width: 30vw;
+    line-height: 4vh;
+    font-family: 'Neue Haas Mediu';
+    letter-spacing: 0;
+    font-size: 1vw;
+    font-weight: 200;
+}
+
+#center #right h1{
+    text-align: right;
+    line-height: 18vh;
+    font-size: 11vw;
+    font-family: 'Neue Haas Mediu';
+    letter-spacing: -0.1vw;
+}
+
+#video video{
+    width: 100%;
+    border-radius: 2vw;
+    position:relative;
+    z-index: 10;
+
+}
+#video{
+    margin-top: 4vw;
+}
+
+#hero{
+    position: absolute;
+    top:90vh;
+    right: 0;
+    width: 60vw;
+    height:40vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #FE350B;
+    filter: blur(20px);
+    animation: anime1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#hero1{
+    position: absolute;
+    top:90vh;
+    right: -4vw;
+    width: 30vw;
+    height:40vw; 
+    background:linear-gradient(#FE350B,#fe600b);
+    filter: blur(25px);
+    border-radius: 50%;
+    animation: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    rotate: 40deg;
+}
+
+#hero2{
+    position: absolute;
+    top:84vh;
+    right: 20vw;
+    width: 30vw;
+    height:30vw; 
+    background:linear-gradient(#FE350B,#fe4c0b);
+    filter: blur(25px);
+    border-radius: 50%;
+    animation: anime3;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    rotate: 40deg;
+
+}
+
+
+@keyframes anime1 {
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(0,-8%);
+    }
+    
+}
+
+@keyframes anime2 {
+    from{
+        transform:translate(0,0) ;
+        rotate: -40deg;
+    }
+    to{
+        transform: translate(0,-15%);
+    }
+
+}
+
+@keyframes anime3 {
+    from{
+        transform:translate(0,0);
+        rotate: -20deg;
+    }
+    to{
+        transform: translate(70%,-30%);
+    }
+    
+}
+
+
+#page2{
+    width: 100%;
+    min-height: 100vh;   
+    padding-top: 5vw; 
+    background-color: #EFEAE3;
+}
+
+#moving-text{
+    white-space: nowrap;
+    display: inline-block;
+    overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+    display:none;
+}
+.container{
+    white-space: nowrap;
+    display: inline-block;
+    animation: move;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+.circle{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: #FE350B;
+    display: inline-block;
+    margin: 1vw 2vw;
+
+}
+.container h1{
+    font-size: 9vw;
+    font-family: 'Neue Haas Mediu';
+    display: inline-block;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    width: 100%;
+    height: 100vh;
+    background-color: #EFEAE3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6vw;
+    position: relative;
+}
+
+#page2-btm-left{
+    width: 70%;
+    margin-top: -7vw;
+    position: relative;
+    z-index: 9;
+}
+#page2-btm-left h1{
+    font-size: 70px;
+    font-family: 'Neue Haas Mediu';
+    line-height: 4.5vw;
+}
+#page2-btm-right{
+    width: 23%;
+    font-family: 'Neue Haas Display thin';
+}
+#page2-btm-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5vw;
+    margin-bottom: 2vw;
+    margin-top: 10vw;
+}
+#page2-btm-right p{
+    font-size: 1.2vw;
+}
+
+#sun{
+    position: absolute;
+    width: 36vw;
+    height: 36vw;
+    border-radius: 50%;
+    background-color: #FE350B;
+    top:35%;
+    left:25%;
+    filter: blur(35px);
+    z-index: 8;
+    background: linear-gradient(to top right, #FE350B,#fe5c0b);
+    animation: sun;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sun {
+    from{
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-10deg);
+    }
+    
+}
+
+#page3{
+    width: 100%;
+    min-height: 150vh;
+    background-color: #EFEAE3;
+}
+
+.index{
+    width: 15%;
+    display: flex;
+    padding-top: 2vw;
+    margin-left: 2vw;
+    align-items: center;
+    z-index: 7;
+
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FE350B;
+    margin-right: 10px;
+}
+.index h4{
+    font-family: 'Neue Haas Display thin';
+    font-size: 1vw;
+}
+#projects-wrapper{
+    margin-top: 6vw;
+}
+.elem{
+    width: 100%;
+    height: 8vw;
+    background-color: #EFEAE3;
+    border-bottom: 1px rgb(153, 152, 152) solid;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.elem .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #FF9831;
+    left: 0;
+    top: -100%;
+    position: absolute;
+    transition: all ease 0.3s;
+}
+
+.elem:hover .overlay{
+    top:0;
+}
+
+.elem h2{
+    font-family: 'Neue Haas Mediu';
+    font-size: 3.5vw;
+    z-index: 9;
+}
+.left-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.left-detail2{
+    font-family: 'Neue Haas Display thin';
+    font-size: 1.1vw;
+    color: rgba(0, 0, 0, 0.416);
+    z-index: 9;
+}
+.left-detail h3{
+    font-family: 'Neue Haas Mediu';
+    text-align: right;
+    font-size: 1.3vw;
+    color: rgba(0, 0, 0, 0.815);
+    z-index: 9;
+}
+
+#fixed-box{
+    position: absolute;
+    width: 24vw;
+    height: 30vw;
+    border-radius: 1vw;
+    top: 20%;
+    left: 50%;
+    z-index: 99;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#mobile-project-wrapper{
+    display: none;
+}
+
+#page4{
+    width: 100%;
+    min-height: 150vh;
+    padding: 0vw 2vw;
+    background-color: #EFEAE3;
+}
+#proj{
+    width: 13%;
+    height: 3vw;
+    border-radius: 2vw;
+    border: 1px rgba(0, 0, 0, 0.516) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}    
+
+#proj a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Neue Haas Display thin';
+    letter-spacing: 0.1vw;
+    z-index: 99;
+    
+}
+#proj::after{
+    content: "";
+    position: absolute;
+    width: 102%;
+    height: 400%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20vw;
+    bottom: -400%;
+    transition: all ease 0.4s;
+
+}
+#proj:hover::after{
+    bottom: -161%;
+
+}
+
+#proj:hover a{
+    color: white;
+}
+
+#page4-center{
+    width: 98%;
+    height: 120vh;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.923);
+    padding: auto;
+    margin-top: 3vw;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+#center-left{
+    width: 45%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#center-right{
+    width: 55%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2vw;
+}
+
+#wrap{
+    width: 50%;
+    height: 50%;
+    color: #EFEAE3;
+    position: relative;
+}
+#top-wrap{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+}
+#sticks{
+    position: relative;
+    width: 0.2vw;
+    height:100%;
+    background-color:#94908b;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.stick{
+    width: 100%;
+    height: 33.33%;
+    border-radius: 10px;
+    transition: all ease 0.2s;
+}
+
+#DPE{
+    font-size: 4.5vw;
+    font-family: 'Neue Haas Mediu';
+    position: relative;
+    margin-left: 1vw;
+    cursor: pointer;
+    color: #94908b;
+}
+#wrap p{
+    color: #EFEAE3;
+    font-family: 'Neue Haas Display thin';
+    margin-top: 2vw;
+}
+
+
+#page5{
+
+    width: 100%;
+    height: 80vh;
+    background-color: #EFEAE3;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding:8vw 0vw;
+    
+  }
+
+.swiper-slide {
+    padding:0vw 4vw 0vw 2vw;
+    background: #EFEAE3;
+    width: 25%;
+    border-left: 1px rgb(119, 117, 117) solid;
+    position: relative;
+
+}
+.swiper-slide img{
+    margin-bottom: 1vw;
+
+}
+.swiper-slide p{
+    font-family: 'Neue Haas Display thin';
+    font-size: 1.1vw;
+
+}
+#page6{
+    width: 100%;
+    height: 114vh;
+    position: relative;
+    z-index:8;
+}
+
+#footer{
+    position: fixed;
+    width: 100%;
+    height: 114vh;
+    bottom: 0;
+    background-color: black;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+}
+#footer-top{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#ft-p1{
+    padding-left: 6vw;
+    padding-bottom: 4vw;
+    position: relative;
+    z-index: 10;
+}
+#ft-p1 h2{
+    color: #EFEAE3;
+    font-family: 'Neue Haas Mediu';
+    font-size: 2.2vw;
+    cursor: pointer;
+
+}
+
+.WSC:hover{ 
+    color: #a7a4a0;
+}
+
+#ft-p2{
+    width: 27%;
+    height: 50%;
+    color: #d4d0ca;
+    font-family: 'Neue Haas Display thin';
+    font-size: 1vw;
+    z-index: 10;
+}
+#ft-p2{
+    padding-right: 5vw;
+}
+input{
+    box-shadow: none;
+    color: #f1ebe3;
+    background:transparent;
+    font-family: 'Neue Haas Display thin';
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    width: 100%;
+    height: 2.3vw;
+}
+
+#footer-bottom{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#footer-bottom h1{
+    height: 82%;
+    color: #EFEAE3;
+    font-size: 23vw;
+    position: relative;
+    font-family: 'Neue Haas Mediu';
+    text-align: center;
+    z-index: 10;
+    border-bottom: #94908b;
+}
+#foot{
+    width: 95%;
+    height: 25%;
+    border-top:1px rgb(236, 221, 221) solid;
+    margin-top: 3vw;
+    margin-left: 2.2vw;
+    margin-right: 2vw;
+    padding: 1vw 0vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-elem{
+    font-family: 'Neue Haas Display thin';
+    font-size: 1.2vw;
+    color: #EFEAE3;
+}
+
+
+#sdown1{
+    z-index: 9;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background-color: #FE350B;
+    rotate: -30deg;
+    top:-9vw;
+    left: -14vw;
+    filter: blur(55px);
+    animation: sanime1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+#sdown2{
+    z-index: 9;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-color: #FE350B;
+    rotate: 25deg;
+    top:-10vw;
+    right: -19vw;
+    filter: blur(55px);
+    animation: sanime2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#sdown3{
+    z-index: 9;
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    background-color:#FE350B;
+    top:4vw;
+    right: 40%;
+    filter: blur(55px);
+}
+
+@keyframes sanime1 {
+    from{
+        rotate: -30deg;
+    }
+    to{
+        rotate: -15deg;
+    }
+}
+
+
+@keyframes sanime2 {
+    from{
+        rotate: 25deg;
+    }
+    to{
+        rotate: 35deg;
+    }
+}
+
+
+
+
+@media (max-width:600px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+    
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+    #main{
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+    }
+    #loader{
+        width: 100%;
+        height: 100vh;
+        background-color:#0B0500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 999;
+        transition: all linear 0.5s;
+        top:0;
+    }
+    #loader h1{
+        background:linear-gradient(to right, #FE350B, #fe780b);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-size: 10vw;
+        font-family: 'Neue Haas Mediu';
+        position: absolute;
+        opacity: 0;
+        animation: load;
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        transition: all linear 0.2s;
+    
+    }
+    
+    #loader h1:nth-child(2){
+        animation-delay: 2s;
+    }
+    #loader h1:nth-child(3){
+        animation-delay: 3s;
+    }
+    
+    @keyframes load {
+        0%{
+            opacity: 0;
+        }
+        10%{
+            opacity: 1;
+        }
+        90%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    
+    #page1{
+        width: 100%;
+        min-height: 100vh;
+        background-color: #EFEAE3;
+        position: relative;
+        padding: 4vw 3vw;
+        padding-right: 4vw;
+        justify-content: center;
+    }
+
+    #full-scr-main{
+        width: 100vw;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        top: -100%;
+        transition: all ease 0.4s;
+    }
+    #full-scr{
+        width: 100%;
+        height: 100%;
+        background-color: #6d6965;
+        opacity: 0.6;
+        margin-top:-10vw;
+        z-index: 199;
+        
+       
+
+    }
+    #full-div1{
+        width: 100%;
+        height: 90%;
+        background-color: #fff;
+        border-bottom-left-radius: 8vw;
+        border-bottom-right-radius: 8vw;
+        z-index: 200;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    #full-div1-text{
+        bottom: 0;
+        margin-top: 29vw;
+    }
+
+    #full-div1 h1{
+        text-align: right;
+        font-size: 15vw;
+        font-family: 'Neue Haas Mediu';
+        padding-right: 5vw;
+        line-height: -6vw;
+    }
+    
+    
+    nav{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 3vw;
+        position: relative;
+        z-index: 101;
+    }
+    nav img{
+        scale: 0.8;
+        transition: all ease 0.2s;
+    }
+    
+    #nav-p2 h4{
+        display: none;   
+    }
+
+    #Menu-main{
+        position: relative;
+        width: 27vw;
+        height: 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px rgba(81, 78, 78, 0.248) solid;
+        padding: 2vw 4vw;
+        border-radius: 5vw;
+        margin-right: 2vw;
+        gap: 1.5vw;
+    }
+    #menu{
+        position: relative;
+        display: block;
+        font-size: 5vw;
+        font-family: 'Neue Haas Display thin';
+        color: black;
+    }
+    #menu-icon{
+        position: relative;
+        width: 8vw;
+        height: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.5vw;
+    }
+    #top-line{
+        width: 90%;
+        height: 4%;
+        background-color: black;
+        transition: all ease 0.5s;
+    }
+    #btm-line{
+        width: 90%;
+        height: 4%;
+        background-color: black;
+        transition: all ease 0.5s;
+    }
+
+    #center{
+        width: 100%;
+        height: 47vh;
+        display: flex;
+        flex-direction:column-reverse;
+        align-items: baseline;
+        justify-content: left;
+        padding-bottom: 1vw;
+        border-bottom: 1px rgba(0, 0, 0, 0.434) solid;
+    }
+    
+    #center #left{
+        width: 100%;
+        height: 25%;
+        font-family: 'Neue Haas Mediu';
+        font-size: 2.5vw;
+        font-weight: 200;
+        margin-top: 18vw;
+    }
+    #center #left h1{
+        width: 80%;
+        line-height: 4.5vw;
+    }
+    #center #right{
+        width: 100%;
+        height: 50%;
+        padding-top: 11vw;
+        padding-right: 4%;
+    }
+    #center #right h1{
+        text-align: right;
+        font-size: 16vw;
+        font-family: 'Neue Haas Mediu';
+        line-height: 13.5vw;
+        letter-spacing: -0.8vw;
+    }
+    
+    #video video{
+ 
+        border-radius: 4vw;
+        position:relative;
+        z-index: 10;
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        /* display: none; */
+        
+    
+    }
+    #video{
+        margin-top: 8vw;
+    }
+    
+    #hero{
+        position: absolute;
+        top:60vh;
+        right: 0;
+        width: 70vw;
+        height:60vw;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: #FE350B;
+        filter: blur(20px);
+        animation: anime1;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    #hero1{
+        position: absolute;
+        top:60vh;
+        right: -4vw;
+        width: 30vw;
+        height:45vw; 
+        background:linear-gradient(#FE350B,#fe600b);
+        filter: blur(25px);
+        border-radius: 50%;
+        animation: anime2;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        rotate: 40deg;
+    }
+    
+    #hero2{
+        position: absolute;
+        top:70vh;
+        right: 3vw;
+        width: 30vw;
+        height:60vw; 
+        background:linear-gradient(#FE350B,#fe4c0b);
+        filter: blur(25px);
+        border-radius: 50%;
+        animation: anime3;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        rotate: 40deg;
+    
+    }
+    
+    
+    @keyframes anime1 {
+        from{
+            transform: translate(0,0);
+        }
+        to{
+            transform: translate(0,-8%);
+        }
+        
+    }
+    
+    @keyframes anime2 {
+        from{
+            transform:translate(0,0) ;
+            rotate: -40deg;
+        }
+        to{
+            transform: translate(0,-15%);
+        }
+    
+    }
+    
+    @keyframes anime3 {
+        from{
+            transform:translate(0,0);
+            rotate: -20deg;
+        }
+        to{
+            transform: translate(70%,-30%);
+        }
+        
+    } 
+
+    #page2{
+        width: 100vw;
+        min-height: 100vh;   
+        padding-top: 5vw; 
+        padding-left: 2vw;
+        background-color: #EFEAE3;
+    }
+    #moving-text{
+        white-space: nowrap;
+        display: inline-block;
+        overflow-x: auto;
+    }
+    #moving-text::-webkit-scrollbar{
+        display:none;
+    }
+    .container{
+        white-space: nowrap;
+        display: inline-block;
+        animation: move;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    
+    }
+    .circle{
+        width: 7vw;
+        height: 7vw;
+        border-radius: 50%;
+        background-color: #FE350B;
+        display: inline-block;
+        margin: 1vw 2vw;
+    
+    }
+    .container h1{
+        font-size: 12vw;
+        font-family: 'Neue Haas Mediu';
+        display: inline-block;
+    }
+    
+    @keyframes move {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+    
+    #page2-bottom{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:left;
+        padding: 0 3vw;
+        position: relative;
+    }
+    
+    #page2-btm-left{
+        width: 100%;
+        height:29%;
+        position: relative;
+        z-index: 9;
+        margin-top: 17vw;
+        letter-spacing: -0.2vw;
+
+    }
+    #page2-btm-left h1{
+        font-size: 7.3vw;
+        font-family: 'Neue Haas Mediu';
+        line-height: 8vw;
+        font-stretch:3vw;
+    }
+    #page2-btm-right{
+        width: 100%;
+        font-family: 'Neue Haas Display thin';
+        position: relative;
+        z-index: 9;
+    }
+    #page2-btm-right img{
+        width: 70%;
+        height: 50%;
+        object-fit: cover;
+        border-radius: 1.5vw;
+        margin-bottom: 6vw;
+        margin-top: 10vw;
+    }
+    #page2-btm-right p{
+        font-size: 4vw;
+        width: 70%;
+        text-align: justify;
+    }
+    
+    #sun{
+        position: absolute;
+        width: 80vw;
+        height: 80vw;
+        border-radius: 50%;
+        background-color: #FE350B;
+        top:15.5%;
+        left:30%;
+        filter: blur(25px);
+        z-index: 8;
+        background: linear-gradient(to top right, #FE350B,#fe5c0b);
+        animation: sun;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    @keyframes sun {
+        from{
+            transform: translate(10%,-10%) skew(0);
+        }
+        to{
+            transform: translate(-10%,10%) skew(-10deg);
+        }
+        
+    }
+    #page3{
+        width: 100vw;
+        min-height: 150vh;
+        padding: 4vw 4vw;
+        background-color: #EFEAE3;
+    }
+    
+    .index{
+        width: 50%;
+        display: flex;
+        padding-top: 4vw;
+        align-items: center;
+        z-index: 7;
+    
+    }
+    .dot{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #FE350B;
+    }
+    .index h4{
+        font-family: 'Neue Haas Display thin';
+        font-size: 4vw;
+    }
+
+    #mobile-project-wrapper{
+        margin-top: 6vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #projects-wrapper{
+        margin-top: 6vw;
+        display: none;
+    }
+
+    .project{
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 2vw;
+    }
+
+    .project-img{
+        width: 100%;
+        height: 80%;
+        border-radius: 5vw;
+        object-fit: cover;
+    }
+    .project-name{
+        margin-top: 2vw;
+        width: 100%;
+        font-family: 'Neue Haas Mediu';
+        font-size: 7vw;
+        color: black;
+    }
+    .project-detail1{
+        font-family: 'Neue Haas Mediu';
+        text-align: left;
+        font-size: 3.5vw;
+        margin-top: 2vw;
+        color: rgba(0, 0, 0, 0.815);
+    }
+    .project-detail2{
+        font-family: 'Neue Haas Display thin';
+        font-size: 3.5vw;
+        margin-top: 0.5vw;
+        color: rgba(0, 0, 0, 0.416);
+    }
+
+    #page4{
+        width: 100vw;
+        min-height: 113vh;
+        padding: 2vw 4vw;
+        background-color: #EFEAE3;
+    }
+    #proj{
+        width: 40vw;
+        height: 10vw;
+        border-radius: 5vw;
+        border: 1px rgba(0, 0, 0, 0.516) solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 12vw;
+    }    
+    
+    #proj a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Neue Haas Display thin';
+        letter-spacing: 0.1vw;
+        z-index: 99;
+        font-size: 4.5vw;
+        
+    }
+    #proj::after{
+        display: none;
+    }
+
+    #page4-center{
+        width: 98%;
+        height: 95vh;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.923);
+        margin-top: 3vw;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #center-left{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5vw;
+    }
+    
+    #center-right{
+        width: 100%;
+        height: 50%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5vw;
+        border: 1px black solid;
+    }
+    
+    #wrap{
+        width: 90%;
+        height: 90%;
+        color: #EFEAE3;
+        position: relative;
+    }
+    #top-wrap{
+        position: relative;
+        width: 100%;
+        height: 46%;
+        display: flex;
+        flex-direction: row;
+    }
+    #sticks{
+        position: relative;
+        width: 0.4vw;
+        height:100%;
+        background-color:#94908b;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+    .stick{
+        width: 100%;
+        height: 33.33%;
+        border-radius: 10px;
+        transition: all ease 0.2s;
+    }
+    
+    #DPE{
+        font-size: 8.5vw;
+        font-family: 'Neue Haas Mediu';
+        position: relative;
+        margin-left: 1vw;
+        cursor: pointer;
+        color: #797774;
+    }
+    #wrap p{
+        color: #EFEAE3;
+        font-family: 'Neue Haas Display thin';
+        margin-top: 8vw;
+        font-size: 3.7vw;
+    }
+
+    #page5{
+
+        width: 100vw;
+        height: 50vh;
+        background-color: #EFEAE3;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-bottom: 7vw;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+        
+      }
+    
+    .swiper-slide {
+        background: #EFEAE3;
+        border-left: 1px rgb(119, 117, 117) solid;
+        position: relative;
+        margin-bottom: 5vw;
+        margin-top: 5vw;
+        height: 70%;
+        width: 70vw;
+    
+    }
+    .swiper-slide img{
+        margin-bottom: 1vw;
+    
+    }
+    .swiper-slide p{
+        font-family: 'Neue Haas Display thin';
+        font-size:4vw;
+    
+    }
+    
+    #page6{
+        width: 100vw;
+        height: 75vh;
+        position: relative;
+        z-index:8;
+        
+    }
+    
+    #footer{
+        position: fixed;
+        width: 100vw;
+        height: 75vh;
+        bottom: 0;
+        background-color: black;
+        z-index: 8;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 3vw 3vw;
+    }
+    #footer-top{
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    
+    #ft-p1{
+        width: 100%;
+        padding-top: 25vw;
+        position: relative;
+        z-index: 10;
+        left: -6vw;
+    }
+    #ft-p1 h2{
+        color: #EFEAE3;
+        font-family: 'Neue Haas Mediu';
+        font-size: 7vw;
+        cursor: pointer;
+        text-align: left;
+    
+    }
+    
+    #ft-p2{
+        width: 100%;
+        height: 30%;
+        color: #f5f4f2;
+        font-family: 'Neue Haas Display thin';
+        font-size: 3vw;
+        z-index: 10;
+    }
+    input{
+        box-shadow: none;
+        border-bottom: 0.3px #a7a4a0 solid;
+        border-right:0.3px #a7a4a0 solid;
+        border-top: 0px;
+        border-left: 0px;
+        color: #EFEAE3;
+        background:transparent;
+        font-family: 'Neue Haas Display thin';
+        font-size: 4vw;
+        margin-top: 3vw;
+        width: 100%;
+        height: 7vw;
+    }
+    
+    #footer-bottom{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #footer-bottom h1{
+        height: 82%;
+        color: #EFEAE3;
+        font-size: 23vw;
+        position: relative;
+        font-family: 'Neue Haas Mediu';
+        text-align: center;
+        z-index: 10;
+        border-bottom: #94908b;
+        margin-top: 8vw;
+    }
+    #foot{
+        width: 95%;
+        height: 15%;
+        border-top: 0.3px #a7a4a0 solid;
+        margin-top: 3vw;
+        margin-left: 2.2vw;
+        margin-right: 2vw;
+        padding: 1vw 0vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2vw;
+        align-items: center;
+        justify-content:space-between;
+    }
+    .footer-elem{
+        font-family: 'Neue Haas Display thin';
+        font-size: 4vw;
+        color: #EFEAE3;
+    }
+    
+    
+    #sdown1{
+        z-index: 9;
+        position: absolute;
+        width: 90%;
+        height: 60%;
+        background-color: #FE350B;
+        rotate: -30deg;
+        top:-30vw;
+        left: -14vw;
+        filter: blur(55px);
+        animation: sanime1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    
+    }
+    
+    #sdown2{
+        z-index: 9;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #FE350B;
+        rotate: 25deg;
+        top:-65vw;
+        right: -60vw;
+        filter: blur(55px);
+        animation: sanime2;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    #sdown3{
+        z-index: 9;
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background-color:#FE350B;
+        top:-10vw;
+        right: 40%;
+        filter: blur(55px);
+        display: none;
+    }
+    
+    @keyframes sanime1 {
+        from{
+            rotate: -30deg;
+        }
+        to{
+            rotate: -15deg;
+        }
+    }
+    
+    
+    @keyframes sanime2 {
+        from{
+            rotate: 25deg;
+        }
+        to{
+            rotate: 45deg;
+        }
+    }
+}
